@@ -2330,13 +2330,13 @@ body {
     padding: 30px 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-    width: 75%; /* Match the about developer width */
-    margin-left: 0; /* Align with the about developer section */
-    clear: both; /* Ensure it appears below floated elements */
+    width: 75%;
+    margin: 0 auto;
+    clear: both;
 }
 
 .disclaimer-section .container {
-    max-width: 100%; /* Adjust to fit the 75% width */
+    max-width: 100%;
     margin: 0 auto;
     text-align: justify;
 }
@@ -2351,11 +2351,14 @@ body {
     font-size: 13px;
     color: #666;
     margin-bottom: 10px;
-    text-align: center; /* Center the copyright text */
+    text-align: center;
 }
 
 .footer-links {
-    text-align: center; /* Center the links container */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 15px;
 }
 
@@ -2363,76 +2366,11 @@ body {
     font-size: 13px;
     color: #007bff;
     text-decoration: none;
-    margin: 0 5px; /* Adjusted margin for centered links */
+    white-space: nowrap;
 }
 
 .footer-link:hover {
     text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .about-developer-container,
-    .disclaimer-section {
-        width: 83%;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-developer-section {
-        margin-bottom: 20px;
-    }
-    
-    .section-title {
-        font-size: 1.3rem;
-    }
-    
-    .about-developer-section p {
-        font-size: 0.95rem;
-    }
-    
-    .about-developer-container,
-    .disclaimer-section {
-        width: 91%;
-    }
-
-    .disclaimer-text, .rights-reserved, .footer-link {
-        font-size: 13px;
-        text-align: left;
-    }
-
-    .disclaimer-section {
-        padding: 20px 10px;
-    }
-    
-    .rights-reserved, .footer-links {
-        text-align: center; /* Keep centered in mobile */
-    }
-}
-
-@media (max-width: 576px) {
-    .section-title {
-        font-size: 1.2rem;
-    }
-    
-    .about-developer-section p {
-        font-size: 0.9rem;
-    }
-    
-    .about-developer-container,
-    .disclaimer-section {
-        width: 100%;
-        margin-right: 0;
-    }
-    
-    .footer-link {
-        display: block; /* Stack links vertically on small screens */
-        margin: 5px 0;
-    }
-    
-    .footer-links a:not(:last-child):after {
-        content: ""; /* Remove the pipe separator on mobile */
-    }
 }
 
 .rera-info {
@@ -2443,8 +2381,27 @@ body {
     color: #333;
 }
 
-/* For responsive adjustments */
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .disclaimer-section {
+        width: 83%;
+    }
+}
+
 @media (max-width: 768px) {
+    .disclaimer-section {
+        width: 91%;
+        padding: 20px 10px;
+    }
+    
+    .disclaimer-text, .rights-reserved, .footer-link {
+        font-size: 13px;
+    }
+    
+    .footer-links {
+        gap: 8px;
+    }
+    
     .rera-info {
         font-size: 12px;
         line-height: 1.4;
@@ -2452,6 +2409,23 @@ body {
 }
 
 @media (max-width: 576px) {
+    .disclaimer-section {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .footer-link {
+        display: block;
+        text-align: center;
+        padding: 3px 0;
+    }
+    
     .rera-info {
         font-size: 11px;
     }
