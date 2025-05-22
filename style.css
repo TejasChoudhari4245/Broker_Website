@@ -2393,14 +2393,14 @@ body {
     text-align: left; /* Better readability on small screens */
   }
 }
-/* Disclaimer Section */
+/* ========== DISCLAIMER SECTION ========== */
 .disclaimer-section {
     background-color: #f0f4f7;
     padding: 30px 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     width: 75%;
-    margin: 0 auto;
+    margin-left: 0;
     clear: both;
 }
 
@@ -2450,20 +2450,67 @@ body {
     color: #333;
 }
 
+/* Make all main sections consistent */
+.gallery-section,
+.overview-section,
+.about-developer-container,
+.disclaimer-section,
+.price-section,
+.site-floor-plan,
+.amenities-section,
+.location-advantages-section,
+.virtual-tour {
+    width: 75%;
+    margin-left: 0;
+    padding: 4rem 0;
+}
+
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+    .gallery-section,
+    .overview-section,
+    .about-developer-container,
+    .disclaimer-section,
+    .price-section,
+    .site-floor-plan,
+    .amenities-section,
+    .location-advantages-section,
+    .virtual-tour {
+        width: 85%;
+    }
+}
+
 @media (max-width: 992px) {
-    .disclaimer-section {
-        width: 83%;
+    .gallery-section,
+    .overview-section,
+    .about-developer-container,
+    .disclaimer-section,
+    .price-section,
+    .site-floor-plan,
+    .amenities-section,
+    .location-advantages-section,
+    .virtual-tour {
+        width: 90%;
     }
 }
 
 @media (max-width: 768px) {
-    .disclaimer-section {
-        width: 91%;
-        padding: 20px 10px;
+    .gallery-section,
+    .overview-section,
+    .about-developer-container,
+    .disclaimer-section,
+    .price-section,
+    .site-floor-plan,
+    .amenities-section,
+    .location-advantages-section,
+    .virtual-tour {
+        width: 95%;
+        padding: 3rem 0;
     }
     
-    .disclaimer-text, .rights-reserved, .footer-link {
+    .disclaimer-text, 
+    .rights-reserved, 
+    .footer-link {
         font-size: 13px;
     }
     
@@ -2478,9 +2525,17 @@ body {
 }
 
 @media (max-width: 576px) {
-    .disclaimer-section {
+    .gallery-section,
+    .overview-section,
+    .about-developer-container,
+    .disclaimer-section,
+    .price-section,
+    .site-floor-plan,
+    .amenities-section,
+    .location-advantages-section,
+    .virtual-tour {
         width: 100%;
-        padding: 20px;
+        padding: 2.5rem 15px;
     }
     
     .footer-links {
